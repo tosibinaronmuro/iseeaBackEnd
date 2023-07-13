@@ -1,10 +1,10 @@
 const mongoose=require('mongoose')
 const { model, Schema } = require("mongoose");
 
-const ImpactSchema = new Schema({
-  author: {
+const InterventionSchema = new Schema({
+  number: {
     type: String,
-    required:[true, "please provide an Author"],
+    required:[true, "please provide a number"],
   
   },
   story:{
@@ -14,4 +14,4 @@ const ImpactSchema = new Schema({
 },{timestamps:true});
 
 
-module.exports=model('Impact',ImpactSchema)
+module.exports=model('Intervention',InterventionSchema)

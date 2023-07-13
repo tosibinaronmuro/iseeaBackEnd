@@ -12,6 +12,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 app.use(cookieParser(process.env.JWT_SECRET));
 const AuthRouter = require("./routes/auth");
 const ImpactRouter = require("./routes/impact");
+const InterventionRouter = require("./routes/intervention");
 // const docxRouter = require("./routes/docx");
 const notFoundHandler = require("./middleware/not-found");
 const errorHandler = require("./middleware/errors-handler");
@@ -26,7 +27,8 @@ app.use(session({
   }));
 // routes
 app.use("/api/v1/auth", AuthRouter);
-app.use("/api/v1/Impacts", ImpactRouter);
+app.use("/api/v1/impacts", ImpactRouter);
+app.use("/api/v1/interventions", InterventionRouter);
 // app.use("",docxRouter)
 // middlewares
 app.set('trust proxy', 1);
