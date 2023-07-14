@@ -1,0 +1,107 @@
+# I.S.E.E.A backend - Node.js, Express, and MongoDB
+
+This is the backend project for an I.S.E.E.A built with Node.js, Express, and MongoDB. The application provides authentication, CRUD functionality for projects, stories, and team members, as well as a payment module integrated with Paystack.
+
+## Features
+
+- User Registration: Allows users to register with their email and password.
+- User Login: Users can log in using their registered credentials.
+- Forgot Password: Provides a password recovery feature using Nodemailer to send password reset emails.
+- User Logout: Allows users to log out of the application.
+- Project CRUD: Provides Create, Read, Update, and Delete operations for projects.
+- Story CRUD: Supports managing stories associated with projects.
+- Team Member CRUD: Allows management of team members associated with projects.
+- Paystack Integration: Provides a payment module integrated with Paystack for processing payments.
+
+## Prerequisites
+
+To run this application, you need to have the following installed:
+
+- Node.js (v12 or above)
+- MongoDB (running instance)
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/tosibinaronmuro/iseeaBackEnd.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd backend-project
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Configure environment variables:
+
+   - Create a `.env` file in the project root directory.
+   - Set the following environment variables:
+
+     ```plaintext
+     MONGODB_URI=<your-mongodb-uri>
+     PAYSTACK_SECRET_KEY=<your-paystack-secret-key>
+     ```
+
+5. Start the application:
+
+   ```bash
+   npm start
+   ```
+
+   The application will be running on `http://localhost:5000`.
+
+## API Endpoints
+
+- **User Registration**
+  - POST `/api/v1/auth/register`
+- **User Login**
+  - POST `/api/v1/auth/login`
+- **Forgot Password**
+  - POST `/api/v1/auth/forgot-password`
+- **Password Reset**
+  - POST `/api/v1/auth/reset-password`
+- **User Logout**
+  - POST `/api/v1/auth/logout`
+- **Project CRUD**
+  - POST `/api/v1/projects`
+  - GET `/api/v1/projects`
+  - PATCH `/api/v1/projects/:id`
+  - DELETE `/api/v1/projects/:id`
+- **Story CRUD**
+  - POST `/api/v1/projects/:projectId/stories`
+  - GET `/api/v1/projects/:projectId/stories`
+  - PATCH `/api/v1/projects/:projectId/stories/:id`
+  - DELETE `/api/v1/projects/:projectId/stories/:id`
+- **Team Member CRUD**
+  - POST `/api/v1/projects/:projectId/team`
+  - GET `/api/v1/projects/:projectId/team`
+  - PATCH `/api/v1/projects/:projectId/team/:id`
+  - DELETE `/api/v1/projects/:projectId/team/:id`
+- **Payment**
+  - POST `/api/v1/payment/process`
+
+## Documentation
+
+For detailed API documentation, refer to the [API Documentation](./docs/api-docs.md) file.
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+## Contributing
+
+Contributions are welcome! especially on unit tests !!! Before making any major changes, please open an issue to discuss the proposed changes.
+
+## Contact
+
+For any inquiries or questions, feel free to contact us at [your-email@example.com](mailto:your-email@example.com).
+
+---
