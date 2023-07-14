@@ -1,6 +1,6 @@
 # I.S.E.E.A backend - Node.js, Express, and MongoDB
 
-This is the backend project for an I.S.E.E.A built with Node.js, Express, and MongoDB. The application provides authentication, CRUD functionality for projects, stories, and team members, as well as a payment module integrated with Paystack.
+This is the backend project for an I.S.E.E.A built with Node.js, Express, and MongoDB. The application provides authentication, CRUD functionality for projects, impacts, and team members, as well as a payment module integrated with Paystack.
 
 ## Features
 
@@ -9,7 +9,8 @@ This is the backend project for an I.S.E.E.A built with Node.js, Express, and Mo
 - Forgot Password: Provides a password recovery feature using Nodemailer to send password reset emails.
 - User Logout: Allows users to log out of the application.
 - Project CRUD: Provides Create, Read, Update, and Delete operations for projects.
-- Story CRUD: Supports managing stories associated with projects.
+- Impacts CRUD: Supports managing ISEEA impacts.
+- Interventions CRUD: Supports managing ISEEA interventions.
 - Team Member CRUD: Allows management of team members associated with projects.
 - Paystack Integration: Provides a payment module integrated with Paystack for processing payments.
 
@@ -75,11 +76,16 @@ To run this application, you need to have the following installed:
   - GET `/api/v1/projects`
   - PATCH `/api/v1/projects/:id`
   - DELETE `/api/v1/projects/:id`
-- **Story CRUD**
-  - POST `/api/v1/projects/:projectId/stories`
-  - GET `/api/v1/projects/:projectId/stories`
-  - PATCH `/api/v1/projects/:projectId/stories/:id`
-  - DELETE `/api/v1/projects/:projectId/stories/:id`
+- **Impact CRUD**
+  - POST `/api/v1/projects/:projectId/impacts`
+  - GET `/api/v1/projects/:projectId/impacts`
+  - PATCH `/api/v1/projects/:projectId/impacts/:id`
+  - DELETE `/api/v1/projects/:projectId/impacts/:id`
+- **Interventions CRUD**
+  - POST `/api/v1/projects/:projectId/interventions`
+  - GET `/api/v1/projects/:projectId/interventions`
+  - PATCH `/api/v1/projects/:projectId/interventions/:id`
+  - DELETE `/api/v1/projects/:projectId/interventions/:id`
 - **Team Member CRUD**
   - POST `/api/v1/projects/:projectId/team`
   - GET `/api/v1/projects/:projectId/team`
