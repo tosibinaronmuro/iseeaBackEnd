@@ -94,13 +94,13 @@ To run this application, you need to have the following installed:
 - **Payment**
   - POST `/api/v1/payment/process`
 
-## Documentation
+<!-- ## Documentation
 
 For detailed API documentation, refer to the [API Documentation](./docs/api-docs.md) file.
 
 ## License
 
-This project is licensed under the [MIT License](./LICENSE).
+This project is licensed under the [MIT License](./LICENSE). -->
 
 ## Contributing
 
