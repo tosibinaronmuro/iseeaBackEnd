@@ -3,7 +3,7 @@ const path = require('path');
 const multer = require('multer');
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'uploads/projects/');
+      cb(null, 'uploads/team-members/');
     },
     filename: function (req, file, cb) {
       const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
@@ -13,12 +13,12 @@ const storage = multer.diskStorage({
   });
   const upload = multer({ storage: storage });
 const router=express.Router()
-const {deleteProject,createProject,getAllProjects,UpdateProject}=require('../controllers/Projects')
-const authMiddleware=require('../middleware/auth')
+const {deleteMember,createMember,getAllMembers,UpdateMember}=require('../controllers/Members.js')
+const authMiddleware=require('../middleware/auth.js')
 
-router.route('/').get(getAllProjects)
-router.route('/').post(authMiddleware,upload.single('projectImage'), createProject) 
-router.route('/:id').patch(authMiddleware, UpdateProject).delete(authMiddleware, deleteProject)
+router.route('/').get(getAllMembers)
+router.route('/').post(authMiddleware,upload.single('memberImage'), createMember) 
+router.route('/:id').patch(authMiddleware, UpdateMember).delete(authMiddleware, deleteMember)
 
 
 module.exports=router 

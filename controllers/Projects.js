@@ -46,6 +46,7 @@ const UpdateProject = async (req, res) => {
     { ...req.body },
     { new: true, runValidators: true }
   );
+  console.log({...req.body})
   res.status(StatusCodes.OK).json({ project: project });
 };
 

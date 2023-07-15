@@ -14,6 +14,7 @@ const AuthRouter = require("./routes/auth");
 const ImpactRouter = require("./routes/impact");
 const InterventionRouter = require("./routes/intervention");
 const ProjectRouter = require("./routes/projects");
+const MemberRouter = require("./routes/members");
 // const docxRouter = require("./routes/docx");
 const notFoundHandler = require("./middleware/not-found");
 const errorHandler = require("./middleware/errors-handler");
@@ -31,6 +32,7 @@ app.use("/api/v1/auth", AuthRouter);
 app.use("/api/v1/impacts", ImpactRouter);
 app.use("/api/v1/interventions", InterventionRouter);
 app.use("/api/v1/projects", ProjectRouter);
+app.use("/api/v1/members", MemberRouter);
 // app.use("",docxRouter)
 // middlewares
 app.set('trust proxy', 1);
