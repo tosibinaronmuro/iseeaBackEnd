@@ -13,7 +13,7 @@ otp=otp+randValue
 <html lang="en" >
 <head>
 <meta charset="UTF-8">
-<title>CodePen - OTP Email Template</title>
+<title>ISEEA forgot-password</title>
 <!-- HTML !-->
  
  
@@ -79,20 +79,20 @@ a{
 <body>
 <!-- partial:index.partial.html -->
 <div style="font-family: Helvetica,Arial,sans-serif;min-width:100%px;overflow:auto;line-height:2">
-<div style="margin:3px auto;width:70%;padding:5px 0">
+<div style="margin:3px auto;width:90%;padding:5px 0">
   <div style="border-bottom:1px solid #eee">
     <a href="" style="font-size:1.4em;color: #00466a;text-decoration:none;font-weight:600">I.S.E.E.A</a>
   </div>
   <p style="font-size:1.1em">Hi ${name},</p>
-  <p>you are about to reset your password for I.S.E.E.A. admin. Use the following URL to complete your Password Recovery Procedure.</p>
-  <button><a  href=${URL}>Reset Password</a></button>
+  <p>You are about to reset your password for I.S.E.E.A. Admin. Use the following URL to complete your Password Recovery Procedure.</p>
+  <a  href=${URL}> <button>Reset Password</button></a>
 
   <p style="font-size:0.9em;">Alternatively, you can directly paste this link in your browser</p><br>
   <p>${URL}</p>
   <p style="font-size:0.9em;">Regards,<br />I.S.E.E.A</p>
   <hr style="border:none;border-top:1px solid #eee" />
   <div style="float:right;padding:8px 0;color:#aaa;font-size:0.8em;line-height:1;font-weight:300">
-    <p>I.S.E.E.A Inc</p>
+    <p>I.S.E.E.A</p>
     <p>initiativeforselfesteem@gmail.com</p>
     <p>+234 802 093 0258</p>
   </div>
@@ -173,14 +173,14 @@ a{
 <body>
 <!-- partial:index.partial.html -->
 <div style="font-family: Helvetica,Arial,sans-serif;min-width:100%;overflow:auto;line-height:2">
-<div style="margin:3px auto;width:70%;padding:5px 0">
+<div style="margin:3px auto;width:90%;padding:5px 0">
   <div style="border-bottom:1px solid #eee">
     <a href="" style="font-size:1.4em;color: #00466a;text-decoration:none;font-weight:600">I.S.E.E.A</a>
   </div>
   <p style="font-size:1.1em">Hi ${name},</p>
   <p>Congratulations! you have successfully reset your password</p>
   <p>click the button below to return to I.S.E.E.A</p>
-  <button><a  href=${URL}>I.S.E.E.A</a></button>
+  <a  href=${URL}> <button>Reset Password</button></a>
   <p style="font-size:0.9em;">Regards,<br />I.S.E.E.A</p>
   <hr style="border:none;border-top:1px solid #eee" />
   <div style="float:right;padding:8px 0;color:#aaa;font-size:0.8em;line-height:1;font-weight:300">
