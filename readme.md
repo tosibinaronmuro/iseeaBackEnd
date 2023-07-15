@@ -104,10 +104,10 @@ This project is licensed under the [MIT License](./LICENSE). -->
 
 ## Contributing
 
-Contributions are welcome! especially on unit tests !!! Before making any major changes, please open an issue to discuss the proposed changes.
+Contributions are welcome! Especially on unit tests !!! Before making any major changes, please open an issue to discuss the proposed changes.
 
 ## Contact
 
-For any inquiries or questions, feel free to contact us at [your-email@example.com](mailto:your-email@example.com).
+For any inquiries or questions, feel free to contact us at [tosironj@gmail.com](mailto:tosironj@gmail.com).
 
 ---
