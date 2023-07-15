@@ -1,6 +1,6 @@
 # I.S.E.E.A backend - Node.js, Express, and MongoDB
 
-This is the backend project for an I.S.E.E.A built with Node.js, Express, and MongoDB. The application provides authentication, CRUD functionality for projects, impacts, and team members, as well as a payment module integrated with Paystack.
+This is the backend project for I.S.E.E.A built with Node.js, Express, and MongoDB. The application provides authentication, CRUD functionality for projects, impacts, and team members, as well as a payment module integrated with Paystack.
 
 ## Features
 
