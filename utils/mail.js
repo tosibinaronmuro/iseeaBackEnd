@@ -19,8 +19,8 @@ otp=otp+randValue
  
 <style>
 button {
-  background-color: #3DD1E7;
-  border: 0 solid #E5E7EB;
+  background-color: #FCC200;
+  border: 0 solid #14213D;
   box-sizing: border-box;
   color: #000000;
   display: flex;
@@ -113,8 +113,8 @@ a{
  
 <style>
 button {
-  background-color: #3DD1E7;
-  border: 0 solid #E5E7EB;
+  background-color: #FCC200;
+  border: 0 solid #14213D;
   box-sizing: border-box;
   color: #000000;
   display: flex;
