@@ -1,5 +1,3 @@
-Here's an example task list for a backend project using Node.js, Express, and MongoDB, incorporating authentication, CRUD functionality, and a payment module with Paystack:
-
 1. **Setup Project**
    - Initialize a new Node.js project.
    - Install required dependencies (`express`, `mongoose`, etc.).
@@ -54,5 +52,3 @@ Here's an example task list for a backend project using Node.js, Express, and Mo
    - Set up deployment environment (e.g., Heroku, AWS, etc.).
    - Deploy the application to a production environment.
    - Configure any necessary CI/CD pipelines.
-
-Remember, this is just a high-level task list to guide you in building your backend project. You can break down each task further and add more specific details as per your project requirements.
