@@ -16,8 +16,7 @@ const {
   gmailPlainTemplate,
 } = require("../utils/mail");
 const { createRandomBytes } = require("../utils/helper");
-const session = require('express-session');
-
+const session = require("express-session");
 
 const register = async (req, res, next) => {
   const { name, email, password } = req.body;
@@ -33,19 +32,15 @@ const register = async (req, res, next) => {
   const token = user.createJWT();
   // const oneDay = 1000 * 60 * 60 * 24;
 
-//   res.cookie("token", token, {
-//     httpOnly: true,
-//     expires: new Date(Date.now() + oneDay),
-//     // secure: process.env.NODE_ENV === 'production',
-//     signed: true,
-//   });
-req.session.jwt = token;
+  //   res.cookie("token", token, {
+  //     httpOnly: true,
+  //     expires: new Date(Date.now() + oneDay),
+  //     // secure: process.env.NODE_ENV === 'production',
+  //     signed: true,
+  //   });
+  req.session.jwt = token;
   res.status(StatusCodes.OK).json({ user: { name: user.name }, token: token });
 };
-
-
-
-
 
 const login = async (req, res, next) => {
   const { email, password } = req.body;
@@ -59,12 +54,12 @@ const login = async (req, res, next) => {
   const token = user.createJWT();
   const oneDay = 1000 * 60 * 60 * 24;
 
-//   res.cookie("token", token, {
-//     httpOnly: true,
-//     expires: new Date(Date.now() + oneDay),
-//     // secure: process.env.NODE_ENV === 'production',
-//     signed: true,
-//   });
+  //   res.cookie("token", token, {
+  //     httpOnly: true,
+  //     expires: new Date(Date.now() + oneDay),
+  //     // secure: process.env.NODE_ENV === 'production',
+  //     signed: true,
+  //   });
   const isPasswordCorrect = await user.comparePasswords(password);
   if (!isPasswordCorrect) {
     throw new Unauthenticated("invalid password");
@@ -73,19 +68,12 @@ const login = async (req, res, next) => {
   res.status(StatusCodes.OK).json({ user: { name: user.name }, token });
 };
 
-
-
-
 const logout = async (req, res) => {
-    req.session.destroy(); // Clear the session
-    res.clearCookie('jwt'); // Clear the JWT cookie
-  
-    res.send('Logged out successfully');
-  }
+  req.session.destroy(); // Clear the session
+  res.clearCookie("jwt"); // Clear the JWT cookie
 
-
-
-
+  res.send("Logged out successfully");
+};
 
 const forgotPassword = async (req, res) => {
   const { email } = req.body;
@@ -122,10 +110,6 @@ const forgotPassword = async (req, res) => {
   res.json({ success: true, msg: "mail reset link sent to your inbox" });
 };
 
-
-
-
-
 const resetPassword = async (req, res) => {
   const { password } = req.body;
   const user = await User.findById(req.user._id);
@@ -149,10 +133,7 @@ const resetPassword = async (req, res) => {
     to: user.email,
     subject: "Reset Password for I.S.E.E.A",
 
-    html: gmailPlainTemplate(
-      `https://iseea.vercel.app/`,
-      user.name
-    ),
+    html: gmailPlainTemplate(`https://iseea.vercel.app/`, user.name),
   };
   mailTransport.sendMail(mail_configs);
   res.json({ success: true, msg: "password reset successfully" });

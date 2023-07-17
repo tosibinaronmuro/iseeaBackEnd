@@ -5,7 +5,7 @@ const Intervention = require("../model/humanitarian-intervnetion.js");
 const getAllInterventions = async (req, res) => {
   const interventions = await Intervention.find();
   if (interventions.length == 0) {
-    res.status(StatusCodes.OK).json({ msg: "there are no Interventions" });
+  return  res.status(StatusCodes.OK).json({ msg: "there are no Interventions" });
   }
   res
     .status(StatusCodes.OK)

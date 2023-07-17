@@ -52,3 +52,12 @@
    - Set up deployment environment (e.g., Heroku, AWS, etc.).
    - Deploy the application to a production environment.
    - Configure any necessary CI/CD pipelines.
+
+10. **Additional Features**
+   - total funds raised
+   - total projects done
+   - total children impacted
+   - annual report pdf
+
+
+

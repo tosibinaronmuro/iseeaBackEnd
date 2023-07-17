@@ -18,7 +18,7 @@ const upload = multer({ storage: storage });
 const getAllMembers = async (req, res) => {
   const members = await Member.find();
   if (members.length == 0) {
-    res.status(StatusCodes.OK).json({ msg: "there are no Members" });
+   return res.status(StatusCodes.OK).json({ msg: "there are no Members" });
   }
   res
     .status(StatusCodes.OK)

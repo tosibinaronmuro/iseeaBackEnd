@@ -5,7 +5,7 @@ const Impact = require("../model/impact");
 const getAllImpacts = async (req, res) => {
   const Impacts = await Impact.find();
   if (Impacts.length == 0) {
-    res.status(StatusCodes.OK).json({ msg: "there are no Impacts" });
+   return res.status(StatusCodes.OK).json({ msg: "there are no Impacts" });
   }
   res
     .status(StatusCodes.OK)
