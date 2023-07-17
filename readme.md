@@ -1,6 +1,6 @@
 # I.S.E.E.A backend - Node.js, Express, and MongoDB
 
-This is the backend project for I.S.E.E.A built with Node.js, Express, and MongoDB. The application provides authentication, CRUD functionality for projects, impacts, and team members, as well as a payment module integrated with Paystack.
+This is the backend project for I.S.E.E.A built with Node.js, Express, and MongoDB. The application provides authentication, CRUD functionality for projects, impacts, Impact Numbers, Annual-reports and team members, as well as a payment module integrated with Paystack.
 
 ## Features
 
@@ -11,6 +11,8 @@ This is the backend project for I.S.E.E.A built with Node.js, Express, and Mongo
 - Project CRUD: Provides Create, Read, Update, and Delete operations for projects.
 - Impacts CRUD: Supports managing ISEEA impacts.
 - Interventions CRUD: Supports managing ISEEA interventions.
+- Impact numbers CRUD: Enables update of the impact numbers as projects arises.
+- Annual Reports CRUD: Supports managing ISEEA Annual reports.
 - Team Member CRUD: Allows management of team members associated with projects.
 - Paystack Integration: Provides a payment module integrated with Paystack for processing payments.
 
@@ -86,6 +88,16 @@ To run this application, you need to have the following installed:
   - GET `/api/v1/projects/:projectId/interventions`
   - PATCH `/api/v1/projects/:projectId/interventions/:id`
   - DELETE `/api/v1/projects/:projectId/interventions/:id`
+- **Annual Reports CRUD**
+  - POST `/api/v1/projects/:projectId/reports`
+  - GET `/api/v1/projects/:projectId/reports`
+  - PATCH `/api/v1/projects/:projectId/reports/:id`
+  - DELETE `/api/v1/projects/:projectId/reports/:id`
+- **Impact Numbers CRUD**
+  - POST `/api/v1/projects/:projectId/numbers`
+  - GET `/api/v1/projects/:projectId/numbers`
+  - PATCH `/api/v1/projects/:projectId/numbers/:id`
+
 - **Team Member CRUD**
   - POST `/api/v1/projects/:projectId/team`
   - GET `/api/v1/projects/:projectId/team`
