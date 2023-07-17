@@ -18,6 +18,7 @@ const InterventionRouter = require("./routes/intervention");
 const ProjectRouter = require("./routes/projects");
 const MemberRouter = require("./routes/members");
 const NumberRouter = require("./routes/numbers");
+const ReportRouter = require("./routes/annual-report");
 
 // import middlewares
 const notFoundHandler = require("./middleware/not-found");
@@ -40,6 +41,7 @@ app.use("/api/v1/interventions", InterventionRouter);
 app.use("/api/v1/projects", ProjectRouter);
 app.use("/api/v1/members", MemberRouter);
 app.use("/api/v1/numbers", NumberRouter);
+app.use("/api/v1/reports", ReportRouter);
 
 // middlewares
 app.set("trust proxy", 1);

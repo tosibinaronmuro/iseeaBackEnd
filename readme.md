@@ -108,6 +108,6 @@ Contributions are welcome! Especially on unit tests !!! Before making any major 
 
 ## Contact
 
-For any inquiries or questions, feel free to contact us at [tosironj@gmail.com](mailto:tosironj@gmail.com).
+For any inquiries or questions, feel free to contact [tosironj@gmail.com](mailto:tosironj@gmail.com).
 
 ---
