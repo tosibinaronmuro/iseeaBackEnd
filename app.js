@@ -24,6 +24,7 @@ const ReportRouter = require("./routes/annual-report");
 const notFoundHandler = require("./middleware/not-found");
 const errorHandler = require("./middleware/errors-handler");
 const connectDB = require("./connectdb/connectdb");
+const { StatusCodes } = require("http-status-codes");
 
 app.use(express.json());
 app.use(
@@ -42,6 +43,9 @@ app.use("/api/v1/projects", ProjectRouter);
 app.use("/api/v1/members", MemberRouter);
 app.use("/api/v1/numbers", NumberRouter);
 app.use("/api/v1/reports", ReportRouter);
+app.get("/",(req,res)=>{
+  res.status(StatusCodes.OK).send("Welcome to ISEEA backend site")
+})
 
 // middlewares
 app.set("trust proxy", 1);
@@ -57,6 +61,7 @@ app.use(xss());
 app.use(mongoSanitize());
 app.use(notFoundHandler);
 app.use(errorHandler);
+
 
 const port = process.env.PORT || 5000;
 
