@@ -1,7 +1,7 @@
 const multer = require("multer");
 const { StatusCodes } = require("http-status-codes");
 const { NotFound } = require("../errors");
-const Project = require("../model/Project");
+const Project = require("../model/project");
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "uploads/");
