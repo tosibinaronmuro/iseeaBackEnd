@@ -5,15 +5,25 @@ const Intervention = require("../model/humanitarian-intervnetion.js");
 const getAllInterventions = async (req, res) => {
   const interventions = await Intervention.find();
   if (interventions.length == 0) {
-  return  res.status(StatusCodes.OK).json({ msg: "there are no Interventions" });
+    return res
+      .status(StatusCodes.OK)
+      .json({ msg: "there are no Interventions" });
   }
-  res
-    .status(StatusCodes.OK)
-    .json({ totalInterventions: interventions.length, interventions: interventions });
+  res.status(StatusCodes.OK).json({
+    totalInterventions: interventions.length,
+    interventions: interventions,
+  });
 };
 
 const createIntervention = async (req, res) => {
-  const intervention = await Intervention.create({ ...req.body });
+  const { story } = req.body;
+  const InterventionLength = await Intervention.find();
+  const NumberLength = InterventionLength.length + 1;
+
+  const intervention = await Intervention.create({
+    number: NumberLength,
+    story: story,
+  });
   res.status(StatusCodes.CREATED).json({ intervention });
 };
 
@@ -31,7 +41,9 @@ const UpdateIntervention = async (req, res) => {
 
 const deleteIntervention = async (req, res) => {
   const { id: InterventionId } = req.params;
-  const intervention = await Intervention.findOneAndDelete({ _id: InterventionId });
+  const intervention = await Intervention.findOneAndDelete({
+    _id: InterventionId,
+  });
   if (!intervention) {
     throw new NotFound(`No Intervention with Id:${InterventionId}`);
   }
