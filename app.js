@@ -27,6 +27,7 @@ const connectDB = require("./connectdb/connectdb");
 const { StatusCodes } = require("http-status-codes");
 
 app.use(express.json());
+app.use('/uploads', express.static('uploads'));
 app.use(
   session({
     secret: process.env.JWT_SECRET,
