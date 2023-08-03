@@ -8,6 +8,7 @@ const rateLimiter = require("express-rate-limit");
 const helmet = require("helmet");
 const xss = require("xss-clean");
 const cors = require("cors");
+const corsOptions = require("./config/corsOptions");
 const mongoSanitize = require("express-mongo-sanitize");
 app.use(cookieParser(process.env.JWT_SECRET));
 
@@ -58,8 +59,7 @@ app.use(
 );
 app.use(helmet());
 // CORS setup
-app.use(cors());
-app.options('*', cors());
+app.use(cors(corsOptions));
 
 app.use(xss());
 app.use(mongoSanitize());
