@@ -28,6 +28,9 @@ const connectDB = require("./connectdb/connectdb");
 const { StatusCodes } = require("http-status-codes");
 
 app.use(express.json());
+// CORS setup
+app.use(cors(corsOptions));
+
 app.use('/uploads', express.static('uploads'));
 app.use(
   session({
@@ -58,8 +61,7 @@ app.use(
   })
 );
 app.use(helmet());
-// CORS setup
-app.use(cors(corsOptions));
+
 
 app.use(xss());
 app.use(mongoSanitize());
