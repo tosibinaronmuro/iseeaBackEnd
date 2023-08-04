@@ -82,7 +82,7 @@ const forgotPassword = async (req, res) => {
   }
   const user = await User.findOne({ email });
   if (!user) {
-    throw new BadRequest("user does not exist");
+    throw new BadRequest("Email not found");
   }
   const token = await ResetToken.findOne({ owner: user._id });
 
@@ -107,14 +107,14 @@ const forgotPassword = async (req, res) => {
   };
   mailTransport.sendMail(mail_configs);
 
-  res.json({ success: true, msg: "mail reset link sent to your inbox" });
+  res.json({ success: true, msg: "Reset link has been successfully sent to your email account" });
 };
 
 const resetPassword = async (req, res) => {
   const { password } = req.body;
   const user = await User.findById(req.user._id);
   if (!user) {
-    throw new BadRequest("user not found!");
+    throw new BadRequest("Email not found!");
   }
 
   const isSamePassword = await user.comparePasswords(password);
