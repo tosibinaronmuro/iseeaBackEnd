@@ -58,6 +58,7 @@ app.use(
   rateLimiter({
     windowMs: 15 * 60 * 1000,
     max: 60,
+    message: 'Too many requests to this endpoint. Please try again later.'
   })
 );
 app.use(helmet());
