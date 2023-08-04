@@ -100,10 +100,10 @@ const forgotPassword = async (req, res) => {
     to: user.email,
     subject: "Reset Password for I.S.E.E.A",
     html: gmailTemplate(
-      `https://iseea.vercel.app/?token=${randomBytes}&id=${user._id}`,
+      `http://localhost:3000/password/reset?token=${randomBytes}&id=${user._id}`,
       user.name
     ),
-    // html:gmailTemplate(`https://tosironsportfoliosite.netlify.app`,user.name),
+     
   };
   mailTransport.sendMail(mail_configs);
 
