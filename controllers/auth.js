@@ -133,7 +133,7 @@ const resetPassword = async (req, res) => {
     to: user.email,
     subject: "Reset Password for I.S.E.E.A",
 
-    html: gmailPlainTemplate(`https://iseea.vercel.app/`, user.name),
+    html: gmailPlainTemplate(`http://localhost:3000/signin`, user.name),
   };
   mailTransport.sendMail(mail_configs);
   res.json({ success: true, msg: "password reset successfully" });

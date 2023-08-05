@@ -179,8 +179,8 @@ a{
   </div>
   <p style="font-size:1.1em">Hi ${name},</p>
   <p>Congratulations! you have successfully reset your password</p>
-  <p>click the button below to return to I.S.E.E.A</p>
-  <a  href=${URL}> <button>Reset Password</button></a>
+  <p>click the button below to return to I.S.E.E.A Admin</p>
+  <a  href=${URL}> <button>Go Home</button></a>
   <p style="font-size:0.9em;">Regards,<br />I.S.E.E.A</p>
   <hr style="border:none;border-top:1px solid #eee" />
   <div style="float:right;padding:8px 0;color:#aaa;font-size:0.8em;line-height:1;font-weight:300">
