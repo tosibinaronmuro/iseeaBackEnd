@@ -26,7 +26,7 @@ const start2 = async () => {
     await connectDB(process.env.MONGO_URL);
     await intervention.deleteMany();
     await intervention.create(jsonintervention);
-    console.log("success!!!!");
+    console.log("success!!!");
     process.exit(0)
   } catch (error) {
     console.log(error);
